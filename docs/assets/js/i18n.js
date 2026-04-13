@@ -250,17 +250,30 @@ const i18n = {
       }
     });
 
-    // 更新页面标题
-    document.title = this.currentLang === 'zh'
-      ? 'Notempty · 轻量级网页笔记工具'
-      : 'Notempty · Lightweight Web Notes';
+    // 更新页面标题 - 检测是否在历史页面
+    const isHistoryPage = document.querySelector('.history-page') !== null;
+    if (isHistoryPage) {
+      document.title = this.currentLang === 'zh'
+        ? '历史版本 - Notempty'
+        : 'Version History - Notempty';
+    } else {
+      document.title = this.currentLang === 'zh'
+        ? 'Notempty · 轻量级网页笔记工具'
+        : 'Notempty · Lightweight Web Notes';
+    }
 
     // 更新 meta description
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.content = this.currentLang === 'zh'
-        ? 'Notempty - 一个对新手友好的轻量级网页笔记工具，支持本地部署或外网部署，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录'
-        : 'Notempty - A beginner-friendly lightweight web note-taking tool supporting local or external deployment, with Markdown editing, auto-save, image upload and multi-user login';
+      if (isHistoryPage) {
+        metaDesc.content = this.currentLang === 'zh'
+          ? 'Notempty 历史版本下载'
+          : 'Notempty Version History Downloads';
+      } else {
+        metaDesc.content = this.currentLang === 'zh'
+          ? 'Notempty - 一个对新手友好的轻量级网页笔记工具，支持本地部署或外网部署，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录'
+          : 'Notempty - A beginner-friendly lightweight web note-taking tool supporting local or external deployment, with Markdown editing, auto-save, image upload and multi-user login';
+      }
     }
 
     // 更新功能卡片
