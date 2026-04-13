@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "activeHostId": "da16a6c0572f589b",
+  "hosts": [
+    {
+      "id": "4758dfba93606809",
+      "name": "tom",
+      "ssh": {
+        "host": "10.0.0.1",
+        "port": 22,
+        "username": "tom",
+        "privateKeyPath": "c:\\Users\\jinlv.tong\\.ssh\\id_rsa",
+        "passphrase": ""
+      },
+      "remoteBasePath": "/home/tom/work/notes/",
+      "runCommand": "go run .",
+      "localCommand": ".vscode/build.bat run",
+      "localCommand1": ".vscode/build.bat  build"
+    },
+    {
+      "id": "da16a6c0572f589b",
+      "name": "tom",
+      "ssh": {
+        "host": "10.0.0.4",
+        "port": 22,
+        "username": "tom",
+        "privateKeyPath": "c:\\Users\\jinlv.tong\\.ssh\\id_rsa",
+        "passphrase": ""
+      },
+      "remoteBasePath": "/home/tom/work/go/notes",
+      "runCommand": "go run .",
+      "localCommand": ".vscode/run.bat",
+      "localCommand1": ".vscode/build.bat  build"
+    }
+  ]
+}

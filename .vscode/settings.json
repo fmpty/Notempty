@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "text.h": "c"
+    },
+    "files.watcherExclude": {
+        "**/notes-config.json": true,
+        "**/notes-vault/**": true,
+        "**/.git/**": true
+      }
+    
+}
