@@ -1,0 +1,45 @@
+title: 本地网页笔记 · Local Notes
+description: 一个对新手友好的本地网页笔记工具，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录
+baseurl: ""
+url: ""
+
+# GitHub Pages 设置
+theme: minima
+markdown: kramdown
+highlighter: rouge
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 作者信息
+author:
+  name: Local Notes Team
+  email: 
+
+# 社交媒体
+social:
+  github: 
+
+# 导航菜单
+nav:
+  - title: 首页
+    url: /
+  - title: 功能介绍
+    url: /#features
+  - title: 快速开始
+    url: /#quickstart
+  - title: GitHub
+    url: https://github.com/tongjinlv/notes
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata

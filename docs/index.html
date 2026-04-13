@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地网页笔记 · Local Notes - 对新手友好的本地笔记工具</title>
+    <meta name="description" content="一个对新手友好的本地网页笔记工具，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Local Notes</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">功能</a></li>
+                <li><a href="#quickstart">快速开始</a></li>
+                <li><a href="#config">配置</a></li>
+                <li><a href="https://github.com/tongjinlv/notes" target="_blank" class="github-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>本地网页笔记<br><span class="highlight">Local Notes</span></h1>
+                <p class="hero-desc">一个对新手友好的本地网页笔记工具</p>
+                <p class="hero-subtitle">浏览器里写 Markdown，自动保存 · 粘贴或拖拽上传图片 · 支持多用户隔离</p>
+                <div class="hero-buttons">
+                    <a href="#quickstart" class="btn btn-primary">快速开始</a>
+                    <a href="https://github.com/yourusername/notes" target="_blank" class="btn btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-preview">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="filename">notes-config.json</span>
+                    </div>
+                    <pre class="code-content"><code>{
+  "listen": "127.0.0.1:8787",
+  "proxyAuth": {
+    "proxyUrl": "http://47.107.74.235:9011",
+    "cookieSecret": "your-secret-key"
+  }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>向下滚动了解更多</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 功能特性 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">核心功能</h2>
+            <p class="section-subtitle">简洁而强大的笔记体验</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Markdown 编辑</h3>
+                    <p>基于 EasyMDE 的实时预览编辑器，支持完整的 Markdown 语法，所见即所得的写作体验。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                    <h3>图片上传</h3>
+                    <p>支持粘贴或拖拽上传图片，自动保存到笔记目录。支持 PNG、JPG、GIF、WebP、HEIC、AVIF、BMP 格式。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <h3>全文搜索</h3>
+                    <p>侧栏支持标题和正文全文检索，快速找到你需要的笔记内容。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>多用户隔离</h3>
+                    <p>支持代理登录、GitHub、Gitee OAuth 登录，每位用户数据完全隔离存储。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>公开笔记</h3>
+                    <p>支持将笔记设为公开，生成静态分享链接，方便与他人分享你的知识。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>主题切换</h3>
+                    <p>支持明暗主题切换，自动保存偏好设置，保护你的眼睛。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 快速开始 -->
+    <section id="quickstart" class="quickstart">
+        <div class="container">
+            <h2 class="section-title">快速开始</h2>
+            <p class="section-subtitle">几分钟即可搭建你的本地笔记服务</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>克隆仓库</h3>
+                        <div class="code-block">
+                            <pre><code>git clone https://github.com/yourusername/notes.git
+cd notes</code></pre>
+                            <button class="copy-btn" data-clipboard="git clone https://github.com/yourusername/notes.git
+cd notes">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>创建配置文件</h3>
+                        <div class="code-block">
+                            <pre><code>echo '{
+  "listen": "127.0.0.1:8787",
+  "proxyAuth": {
+    "proxyUrl": "http://47.107.74.235:9011",
+    "cookieSecret": "your-random-secret-key"
+  }
+}' > notes-config.json</code></pre>
+                            <button class="copy-btn" data-clipboard='echo '{"listen": "127.0.0.1:8787","proxyAuth": {"proxyUrl": "http://47.107.74.235:9011","cookieSecret": "your-random-secret-key"}}' > notes-config.json'>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>启动服务</h3>
+                        <div class="code-block">
+                            <pre><code>go run .</code></pre>
+                            <button class="copy-btn" data-clipboard="go run .">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>开始使用</h3>
+                        <p>打开浏览器访问 <code>http://127.0.0.1:8787</code>，点击登录按钮即可开始使用。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 配置说明 -->
+    <section id="config" class="config">
+        <div class="container">
+            <h2 class="section-title">配置说明</h2>
+            <p class="section-subtitle">灵活的登录方式配置</p>
+
+            <div class="config-tabs">
+                <button class="tab-btn active" data-tab="proxy">代理登录（推荐）</button>
+                <button class="tab-btn" data-tab="github">GitHub OAuth</button>
+                <button class="tab-btn" data-tab="gitee">Gitee OAuth</button>
+            </div>
+
+            <div class="tab-content active" id="proxy">
+                <div class="code-block">
+                    <pre><code>{
+  "listen": "127.0.0.1:8787",
+  "data": "notes-vault",
+  "maxUploadMB": 100,
+  "proxyAuth": {
+    "proxyUrl": "http://47.107.74.235:9011",
+    "cookieSecret": "请替换成32位以上随机字符串",
+    "allowedLogins": []
+  }
+}</code></pre>
+                    <button class="copy-btn" data-clipboard='{"listen": "127.0.0.1:8787","data": "notes-vault","maxUploadMB": 100,"proxyAuth": {"proxyUrl": "http://47.107.74.235:9011","cookieSecret": "请替换成32位以上随机字符串","allowedLogins": []}}'>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="config-info">
+                    <h4>代理登录优势</h4>
+                    <ul>
+                        <li>配置最简单，只需一个代理服务地址</li>
+                        <li>无需申请 GitHub/Gitee OAuth 应用</li>
+                        <li>统一的回调地址，多环境部署更方便</li>
+                        <li>客户端不接触 Client Secret，更安全</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="github">
+                <div class="code-block">
+                    <pre><code>{
+  "listen": ":8787",
+  "data": "notes-vault",
+  "maxUploadMB": 100,
+  "githubOAuth": {
+    "clientId": "your-github-client-id",
+    "clientSecret": "your-github-client-secret",
+    "callbackUrl": "http://127.0.0.1:8787/auth/github/callback",
+    "cookieSecret": "请替换成32位以上随机字符串",
+    "allowedLogins": []
+  }
+}</code></pre>
+                    <button class="copy-btn" data-clipboard='{"listen": ":8787","data": "notes-vault","maxUploadMB": 100,"githubOAuth": {"clientId": "your-github-client-id","clientSecret": "your-github-client-secret","callbackUrl": "http://127.0.0.1:8787/auth/github/callback","cookieSecret": "请替换成32位以上随机字符串","allowedLogins": []}}'>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="config-info">
+                    <h4>GitHub OAuth 配置步骤</h4>
+                    <ol>
+                        <li>打开 GitHub → Settings → Developer settings → OAuth Apps → New OAuth App</li>
+                        <li>填写 Application name、Homepage URL 和 Authorization callback URL</li>
+                        <li>创建后获取 Client ID 和 Client Secret</li>
+                        <li>填入配置文件即可</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="tab-content" id="gitee">
+                <div class="code-block">
+                    <pre><code>{
+  "listen": ":8787",
+  "data": "notes-vault",
+  "maxUploadMB": 100,
+  "giteeOAuth": {
+    "clientId": "your-gitee-client-id",
+    "clientSecret": "your-gitee-client-secret",
+    "callbackUrl": "http://127.0.0.1:8787/auth/gitee/callback",
+    "cookieSecret": "请替换成32位以上随机字符串",
+    "allowedLogins": []
+  }
+}</code></pre>
+                    <button class="copy-btn" data-clipboard='{"listen": ":8787","data": "notes-vault","maxUploadMB": 100,"giteeOAuth": {"clientId": "your-gitee-client-id","clientSecret": "your-gitee-client-secret","callbackUrl": "http://127.0.0.1:8787/auth/gitee/callback","cookieSecret": "请替换成32位以上随机字符串","allowedLogins": []}}'>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="config-info">
+                    <h4>Gitee OAuth 配置步骤</h4>
+                    <ol>
+                        <li>打开 Gitee → 设置 → 第三方应用 → 创建应用</li>
+                        <li>填写应用名称、应用主页和回调地址</li>
+                        <li>创建后获取 Client ID 和 Client Secret</li>
+                        <li>填入配置文件即可</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 目录结构 -->
+    <section class="structure">
+        <div class="container">
+            <h2 class="section-title">数据存储结构</h2>
+            <p class="section-subtitle">清晰的数据组织方式</p>
+            
+            <div class="structure-content">
+                <div class="structure-diagram">
+                    <pre class="tree-view"><code>notes-vault/
+├── users/
+│   └── github/
+│       └── alice/
+│           └── 2026-03/
+│               └── n_xxxxxxxx/
+│                   ├── index.md
+│                   └── image-*.png
+└── .notes-sidebar-order.json</code></pre>
+                </div>
+                <div class="structure-info">
+                    <h4>存储特点</h4>
+                    <ul>
+                        <li>每位用户拥有独立的存储目录</li>
+                        <li>按年月组织笔记，便于管理</li>
+                        <li>每篇笔记是一个文件夹，包含 Markdown 和图片</li>
+                        <li>与 Hugo leaf bundle 格式兼容</li>
+                        <li>支持 Git 版本管理</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>Local Notes</span>
+                </div>
+                <p class="footer-desc">一个对新手友好的本地网页笔记工具</p>
+                <div class="footer-links">
+                    <a href="#features">功能</a>
+                    <a href="#quickstart">快速开始</a>
+                    <a href="#config">配置</a>
+                    <a href="https://github.com/yourusername/notes" target="_blank">GitHub</a>
+                </div>
+                <p class="footer-license">开源项目，遵循 MIT 许可证</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
