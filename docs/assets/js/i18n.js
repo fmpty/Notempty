@@ -323,11 +323,19 @@ const i18n = {
         if (h3) h3.textContent = stepData[index].title;
         // 步骤 3 和 4 包含 HTML 标签（<code>, <br>）
         if (index === 2 || index === 3) {
-          // 使用 innerHTML 更新第一个 p 标签
+          // 使用 innerHTML 更新第一个 p 标签，包含所有内容
           if (paragraphs[0]) paragraphs[0].innerHTML = stepData[index].desc;
+          // 隐藏其他段落（因为内容已经包含在第一个段落的 desc 中）
+          for (let i = 1; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = 'none';
+          }
         } else {
           // 其他步骤使用 textContent
           if (paragraphs[0]) paragraphs[0].textContent = stepData[index].desc;
+          // 确保其他段落显示
+          for (let i = 1; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = '';
+          }
         }
       }
     });
