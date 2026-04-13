@@ -32,8 +32,9 @@ const I18N = {
       downloadTitle: '下载最新版本',
       currentVersion: '当前版本',
       releaseDate: '发布日期',
-      viewHistory: '查看历史版本',
+      viewHistory: '查看历史版本 →',
       moreOptions: '更多下载选项',
+      download: '下载',
       steps: [
         { title: '下载程序', desc: '根据你的操作系统选择对应的版本下载，解压到任意目录。' },
         { title: '创建配置文件', desc: '在程序同级目录创建 notes-config.json 文件：' },
@@ -42,6 +43,14 @@ const I18N = {
       ],
       copy: '复制',
       copied: '已复制!'
+    },
+    history: {
+      title: '历史版本',
+      subtitle: '下载 Notempty 的所有历史版本',
+      backToHome: '← 返回首页',
+      changelog: '更新内容',
+      latest: '最新版本',
+      download: '下载'
     },
     config: {
       title: '配置说明',
@@ -128,8 +137,9 @@ const I18N = {
       downloadTitle: 'Download Latest Version',
       currentVersion: 'Current Version',
       releaseDate: 'Release Date',
-      viewHistory: 'View Version History',
+      viewHistory: 'View Version History →',
       moreOptions: 'More Download Options',
+      download: 'Download',
       steps: [
         { title: 'Download', desc: 'Choose the version for your operating system, download and extract to any directory.' },
         { title: 'Create Config', desc: 'Create notes-config.json file in the same directory as the program:' },
@@ -138,6 +148,14 @@ const I18N = {
       ],
       copy: 'Copy',
       copied: 'Copied!'
+    },
+    history: {
+      title: 'Version History',
+      subtitle: 'Download all historical versions of Notempty',
+      backToHome: '← Back to Home',
+      changelog: 'Changelog',
+      latest: 'Latest',
+      download: 'Download'
     },
     config: {
       title: 'Configuration',

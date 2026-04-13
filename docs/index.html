@@ -459,11 +459,12 @@
                     const mainFile = files[0]; // 第一个文件作为主下载
                     const card = document.createElement('div');
                     card.className = 'download-card';
+                    const downloadText = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('quickstart.download') : '下载';
                     card.innerHTML = `
                         <div class="download-icon">${icons[platform]}</div>
                         <h4>${platformNames[platform]}</h4>
                         <p class="download-arch">${mainFile.arch === 'amd64' ? 'x64' : mainFile.arch}</p>
-                        <a href="releases/${VERSION.latest}/${mainFile.file}" class="btn btn-primary download-btn">下载</a>
+                        <a href="releases/${VERSION.latest}/${mainFile.file}" class="btn btn-primary download-btn">${downloadText}</a>
                     `;
                     mainDownloads.appendChild(card);
                 }
@@ -477,10 +478,11 @@
                     files.slice(1).forEach(file => {
                         const item = document.createElement('div');
                         item.className = 'version-item';
+                        const downloadText2 = (typeof i18n !== 'undefined' && i18n.t) ? i18n.t('quickstart.download') : '下载';
                         item.innerHTML = `
                             <span class="version-tag">${platformNames[platform]}</span>
                             <span class="version-desc">${file.arch === 'amd64' ? 'x64' : file.arch === '386' ? '32位 (x86)' : file.arch === 'arm64' ? 'ARM64' : file.arch}</span>
-                            <a href="releases/${VERSION.latest}/${file.file}" class="version-link">下载</a>
+                            <a href="releases/${VERSION.latest}/${file.file}" class="version-link">${downloadText2}</a>
                         `;
                         moreDownloads.appendChild(item);
                     });
