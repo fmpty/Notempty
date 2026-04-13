@@ -430,7 +430,7 @@ const i18n = {
 
     // Hero 区域
     const heroSubtitle = document.querySelector('.hero-desc');
-    if (heroSubtitle) heroSubtitle.textContent = this.t('hero.subtitle');
+    if (heroSubtitle) heroSubtitle.textContent = this.t('hero.descriptionShort');
 
     const scrollIndicator = document.querySelector('.scroll-indicator span');
     if (scrollIndicator) scrollIndicator.textContent = this.t('hero.scroll');
@@ -439,6 +439,27 @@ const i18n = {
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.setAttribute('title', this.t('quickstart.copy'));
     });
+
+    // 更新动态生成的下载按钮
+    this.updateDownloadButtons();
+  },
+
+  updateDownloadButtons() {
+    // 更新主下载区域的下载按钮
+    document.querySelectorAll('.download-card .download-btn').forEach(btn => {
+      btn.textContent = this.t('quickstart.download');
+    });
+
+    // 更新更多下载选项的下载链接
+    document.querySelectorAll('.version-item .version-link').forEach(link => {
+      link.textContent = this.t('quickstart.download');
+    });
+
+    // 更新历史版本链接
+    const versionLink = document.querySelector('.download-note .version-link');
+    if (versionLink) {
+      versionLink.textContent = this.t('quickstart.viewHistory');
+    }
   },
 
   updateSwitcher() {
