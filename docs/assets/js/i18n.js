@@ -10,6 +10,7 @@ const I18N = {
     hero: {
       title: 'Notempty',
       subtitle: '轻量级笔记工具',
+      descriptionShort: '一个对新手友好的轻量级笔记工具',
       description: '一个对新手友好的轻量级笔记工具，支持本地部署或外网部署。浏览器里写 Markdown，自动保存，支持图片上传和多用户登录。',
       download: '立即下载',
       scroll: '向下滚动了解更多'
@@ -115,6 +116,7 @@ const I18N = {
     hero: {
       title: 'Notempty',
       subtitle: 'Lightweight Notes',
+      descriptionShort: 'A beginner-friendly lightweight note-taking tool',
       description: 'A beginner-friendly lightweight note-taking tool supporting local or external deployment. Write Markdown in browser with auto-save, image upload and multi-user login.',
       download: 'Download Now',
       scroll: 'Scroll down to learn more'
