@@ -7,9 +7,6 @@ on:
   # 在推送到 main 分支时触发部署
   push:
     branches: [ main, master ]
-    paths:
-      - 'docs/**'
-      - '.github/workflows/pages.yml'
 
   # 允许手动触发部署
   workflow_dispatch:
@@ -36,32 +33,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 使用 Jekyll 构建（可选，如果不需要 Jekyll 功能可以跳过）
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-          bundler-cache: true
-
-      - name: Build with Jekyll
+      - name: Copy static files
         run: |
-          cd docs
-          bundle init
-          bundle add jekyll --version "~> 4.3"
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-
-      # 或者直接复制静态文件（如果不使用 Jekyll）
-      # - name: Copy static files
-      #   run: |
-      #     mkdir -p _site
-      #     cp -r docs/* _site/
+          mkdir -p _site
+          cp -r docs/* _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/_site
+          path: _site
 
   # 部署任务
   deploy:
