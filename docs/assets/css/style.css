@@ -955,3 +955,89 @@ code {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
 }
+
+/* 语言切换器 */
+.lang-switcher {
+    position: relative;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    border-color: var(--primary);
+    background: var(--surface-light);
+}
+
+.lang-current {
+    font-size: 0.9rem;
+}
+
+.lang-arrow {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.lang-switcher:hover .lang-arrow {
+    transform: rotate(180deg);
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
+}
+
+.lang-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-switcher:hover .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-dropdown a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.lang-dropdown a:hover {
+    background: var(--surface-light);
+    color: var(--primary-light);
+}
+
+.lang-dropdown a.active {
+    color: var(--primary-light);
+    font-weight: 600;
+}
