@@ -473,6 +473,21 @@ const i18n = {
     if (versionLink) {
       versionLink.textContent = this.t('quickstart.viewHistory');
     }
+
+    // 更新历史页面的下载按钮
+    document.querySelectorAll('.download-item-btn').forEach(btn => {
+      btn.textContent = this.t('history.download');
+    });
+
+    // 更新历史页面的"最新版本"标签
+    document.querySelectorAll('.version-badge').forEach(badge => {
+      badge.textContent = this.t('history.latest');
+    });
+
+    // 更新历史页面的"更新内容"标题
+    document.querySelectorAll('.changelog h4').forEach(h4 => {
+      h4.textContent = this.t('history.changelog');
+    });
   },
 
   updateSwitcher() {
