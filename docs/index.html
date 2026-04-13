@@ -37,6 +37,16 @@
                     </svg>
                     GitHub
                 </a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn" onclick="i18n.toggleLang()">
+                        <span class="lang-current">中</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="#" onclick="i18n.setLang('zh'); return false;">中文</a>
+                        <a href="#" onclick="i18n.setLang('en'); return false;">English</a>
+                    </div>
+                </li>
             </ul>
             <button class="mobile-menu-btn" aria-label="菜单">
                 <span></span>

@@ -297,7 +297,7 @@ const i18n = {
   
   init() {
     this.updatePage();
-    this.createLangSwitcher();
+    this.updateSwitcher();
   },
   
   setLang(lang) {
@@ -336,25 +336,6 @@ const i18n = {
       : 'Notempty · Lightweight Web Notes';
   },
   
-  createLangSwitcher() {
-    const nav = document.querySelector('.nav-links');
-    if (!nav || document.querySelector('.lang-switcher')) return;
-    
-    const li = document.createElement('li');
-    li.className = 'lang-switcher';
-    li.innerHTML = `
-      <button class="lang-btn" onclick="i18n.toggleLang()">
-        <span class="lang-current">${this.currentLang === 'zh' ? '中' : 'EN'}</span>
-        <span class="lang-arrow">▼</span>
-      </button>
-      <div class="lang-dropdown">
-        <a href="#" onclick="i18n.setLang('zh'); return false;" class="${this.currentLang === 'zh' ? 'active' : ''}">中文</a>
-        <a href="#" onclick="i18n.setLang('en'); return false;" class="${this.currentLang === 'en' ? 'active' : ''}">English</a>
-      </div>
-    `;
-    nav.appendChild(li);
-  },
-  
   updateSwitcher() {
     const btn = document.querySelector('.lang-current');
     if (btn) {
@@ -362,7 +343,11 @@ const i18n = {
     }
     const links = document.querySelectorAll('.lang-dropdown a');
     links.forEach(link => {
-      link.classList.toggle('active', link.textContent.includes(this.currentLang === 'zh' ? '中文' : 'English'));
+      link.classList.remove('active');
+      if ((this.currentLang === 'zh' && link.textContent === '中文') ||
+          (this.currentLang === 'en' && link.textContent === 'English')) {
+        link.classList.add('active');
+      }
     });
   },
   
