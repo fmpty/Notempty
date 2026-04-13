@@ -2,6 +2,7 @@
 const VERSION = {
   latest: "v1.0.0",
   date: "2026-04-13",
+  changelog: "初始版本发布",
   files: {
     windows: [
       { name: "Windows x64", file: "Notempty-v1.0.0-windows-amd64.exe", arch: "amd64" },
@@ -17,3 +18,18 @@ const VERSION = {
     ]
   }
 };
+
+// 历史版本列表 - 添加新版本时在这里追加
+const VERSIONS_HISTORY = [
+  {
+    version: "v1.0.0",
+    date: "2026-04-13",
+    changelog: "初始版本发布"
+  }
+  // 添加更多历史版本...
+  // {
+  //   version: "v0.9.0",
+  //   date: "2026-04-01",
+  //   changelog: "Beta 测试版本"
+  // }
+];
