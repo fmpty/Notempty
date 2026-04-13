@@ -39,7 +39,8 @@ const I18N = {
       steps: [
         { title: '下载程序', desc: '根据你的操作系统选择对应的版本下载，解压到任意目录。' },
         { title: '创建配置文件', desc: '在程序同级目录创建 notes-config.json 文件：' },
-        { title: '运行程序', desc: 'Windows：双击运行 notes.exe<br>Linux/macOS：在终端运行 ./notes' },
+        { title: '运行程序', desc: 'Windows：双击运行 Notempty.exe<br>Linux/macOS：在终端运行 ./Notempty' },
+        { title: '部署为系统服务（可选）', desc: 'Windows（管理员）：<code>Notempty.exe -service install -svc-name LocalNotes</code><br>Linux：创建 systemd 服务文件<br>macOS：使用 launchd 或 brew services' },
         { title: '开始使用', desc: '打开浏览器访问 http://127.0.0.1:8787，点击登录按钮即可开始使用。' }
       ],
       copy: '复制',
@@ -145,7 +146,8 @@ const I18N = {
       steps: [
         { title: 'Download', desc: 'Choose the version for your operating system, download and extract to any directory.' },
         { title: 'Create Config', desc: 'Create notes-config.json file in the same directory as the program:' },
-        { title: 'Run Program', desc: 'Windows: Double-click to run notes.exe<br>Linux/macOS: Run ./notes in terminal' },
+        { title: 'Run Program', desc: 'Windows: Double-click to run Notempty.exe<br>Linux/macOS: Run ./Notempty in terminal' },
+        { title: 'Deploy as Service (Optional)', desc: 'Windows (Admin): <code>Notempty.exe -service install -svc-name LocalNotes</code><br>Linux: Create systemd service file<br>macOS: Use launchd or brew services' },
         { title: 'Start Using', desc: 'Open browser and visit http://127.0.0.1:8787, click login button to start using.' }
       ],
       copy: 'Copy',

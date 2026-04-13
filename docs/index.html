@@ -250,13 +250,23 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>运行程序</h3>
-                        <p>Windows：双击运行 <code>notes.exe</code></p>
-                        <p>Linux/macOS：在终端运行 <code>./notes</code></p>
+                        <p>Windows：双击运行 <code>Notempty.exe</code></p>
+                        <p>Linux/macOS：在终端运行 <code>./Notempty</code></p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>部署为系统服务（可选）</h3>
+                        <p>Windows（管理员）：<code>Notempty.exe -service install -svc-name LocalNotes</code></p>
+                        <p>Linux：创建 systemd 服务文件</p>
+                        <p>macOS：使用 launchd 或 brew services</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
                     <div class="step-content">
                         <h3>开始使用</h3>
                         <p>打开浏览器访问 <code>http://127.0.0.1:8787</code>，点击登录按钮即可开始使用。</p>
