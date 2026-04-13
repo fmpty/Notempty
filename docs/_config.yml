@@ -1,5 +1,5 @@
-title: 本地网页笔记 · Local Notes
-description: 一个对新手友好的本地网页笔记工具，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录
+title: Notempty · 轻量级笔记工具
+description: Notempty - 一个对新手友好的轻量级网页笔记工具，支持本地部署或外网部署，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录
 baseurl: ""
 url: ""
 
@@ -16,7 +16,7 @@ plugins:
 
 # 作者信息
 author:
-  name: Local Notes Team
+  name: Notempty Team
   email: 
 
 # 社交媒体
