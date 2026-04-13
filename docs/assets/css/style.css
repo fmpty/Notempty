@@ -1012,10 +1012,11 @@ code {
     box-shadow: var(--shadow-lg);
 }
 
-.lang-dropdown.show {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
+.lang-dropdown.show,
+.lang-switcher:hover .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .lang-dropdown a {
