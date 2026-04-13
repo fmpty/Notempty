@@ -88,6 +88,12 @@ body {
     color: var(--primary);
 }
 
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
