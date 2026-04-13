@@ -354,7 +354,12 @@ const i18n = {
   toggleLang() {
     const dropdown = document.querySelector('.lang-dropdown');
     if (dropdown) {
-      dropdown.classList.toggle('show');
+      const isShown = dropdown.classList.contains('show');
+      if (isShown) {
+        dropdown.classList.remove('show');
+      } else {
+        dropdown.classList.add('show');
+      }
     }
   }
 };
