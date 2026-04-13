@@ -373,4 +373,34 @@ document.addEventListener('click', (e) => {
 });
 
 // 初始化
-document.addEventListener('DOMContentLoaded', () => i18n.init());
+document.addEventListener('DOMContentLoaded', () => {
+  i18n.init();
+  
+  // 绑定语言切换按钮事件
+  const langBtn = document.getElementById('lang-btn');
+  const langDropdown = document.getElementById('lang-dropdown');
+  
+  if (langBtn && langDropdown) {
+    // 点击按钮切换下拉菜单
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('show');
+    });
+    
+    // 点击语言选项
+    langDropdown.querySelectorAll('a[data-lang]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const lang = link.getAttribute('data-lang');
+        i18n.setLang(lang);
+        langDropdown.classList.remove('show');
+      });
+    });
+    
+    // 点击外部关闭下拉菜单
+    document.addEventListener('click', () => {
+      langDropdown.classList.remove('show');
+    });
+  }
+});

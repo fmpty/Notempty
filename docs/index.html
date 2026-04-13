@@ -38,13 +38,13 @@
                     GitHub
                 </a></li>
                 <li class="lang-switcher">
-                    <button class="lang-btn" onclick="i18n.toggleLang()">
+                    <button class="lang-btn" id="lang-btn">
                         <span class="lang-current">中</span>
                         <span class="lang-arrow">▼</span>
                     </button>
-                    <div class="lang-dropdown">
-                        <a href="#" onclick="i18n.setLang('zh'); return false;">中文</a>
-                        <a href="#" onclick="i18n.setLang('en'); return false;">English</a>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="zh">中文</a>
+                        <a href="#" data-lang="en">English</a>
                     </div>
                 </li>
             </ul>
