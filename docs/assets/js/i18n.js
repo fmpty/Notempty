@@ -319,14 +319,15 @@ const i18n = {
     steps.forEach((step, index) => {
       if (stepData[index]) {
         const h3 = step.querySelector('h3');
-        const p = step.querySelector('p');
+        const paragraphs = step.querySelectorAll('p');
         if (h3) h3.textContent = stepData[index].title;
-        if (p) {
-          if (index === 2) {
-            p.innerHTML = stepData[index].desc;
-          } else {
-            p.textContent = stepData[index].desc;
-          }
+        // 步骤 3 和 4 包含 HTML 标签（<code>, <br>）
+        if (index === 2 || index === 3) {
+          // 使用 innerHTML 更新第一个 p 标签
+          if (paragraphs[0]) paragraphs[0].innerHTML = stepData[index].desc;
+        } else {
+          // 其他步骤使用 textContent
+          if (paragraphs[0]) paragraphs[0].textContent = stepData[index].desc;
         }
       }
     });
