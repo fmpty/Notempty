@@ -32,7 +32,7 @@ nav:
   - title: 快速开始
     url: /#quickstart
   - title: GitHub
-    url: https://github.com/jmpty/notes
+    url: https://github.com/jmpty/notempty
 
 # 排除文件
 exclude:
