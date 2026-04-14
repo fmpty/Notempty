@@ -147,7 +147,7 @@ const I18N = {
         { title: 'Download', desc: 'Choose the version for your operating system, download and extract to any directory.' },
         { title: 'Create Config', desc: 'Create notes-config.json file in the same directory as the program:' },
         { title: 'Run Program', desc: 'Windows: Double-click to run Notempty.exe<br>Linux/macOS: Run ./Notempty in terminal' },
-        { title: 'Deploy as Service (Optional)', desc: 'Windows (Admin): <code>Notempty.exe -service install -svc-name LocalNotes</code><br>Linux: Create systemd service file<br>macOS: Use launchd or brew services' },
+        { title: 'Deploy as Service (Optional)', desc: 'Windows (Admin): <code>Notempty.exe -service install -svc-name Notempty</code><br>Linux: Create systemd service file<br>macOS: Use launchd or brew services' },
         { title: 'Start Using', desc: 'Open browser and visit http://127.0.0.1:8787, click login button to start using.' }
       ],
       copy: 'Copy',
