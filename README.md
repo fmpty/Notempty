@@ -1,6 +1,6 @@
-# Local Notes 项目主页
+# Noteempty 项目主页
 
-这是 Local Notes 软件项目的 GitHub Pages 主页源码。
+这是 Noteempty 软件项目的 GitHub Pages 主页源码。
 
 ## 🚀 部署说明
 
