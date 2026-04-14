@@ -9,7 +9,7 @@ const I18N = {
     },
     hero: {
       title: 'Notempty',
-      subtitle: '轻量级笔记工具',
+      subtitle: '不空笔记',
       descriptionShort: '一个对新手友好的轻量级笔记工具',
       description: '一个对新手友好的轻量级笔记工具，支持本地部署或外网部署。浏览器里写 Markdown，自动保存，支持图片上传和多用户登录。',
       download: '立即下载',
