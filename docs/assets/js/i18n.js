@@ -256,11 +256,11 @@ const i18n = {
     const isHistoryPage = document.querySelector('.history-page') !== null;
     if (isHistoryPage) {
       document.title = this.currentLang === 'zh'
-        ? '历史版本 - Notempty'
+        ? '历史版本 - Notempty · 悟空笔记'
         : 'Version History - Notempty';
     } else {
       document.title = this.currentLang === 'zh'
-        ? 'Notempty · 轻量级网页笔记工具'
+        ? 'Notempty · 悟空笔记'
         : 'Notempty · Lightweight Web Notes';
     }
 
@@ -269,11 +269,11 @@ const i18n = {
     if (metaDesc) {
       if (isHistoryPage) {
         metaDesc.content = this.currentLang === 'zh'
-          ? 'Notempty 历史版本下载'
+          ? '悟空笔记 (Notempty) 历史版本下载'
           : 'Notempty Version History Downloads';
       } else {
         metaDesc.content = this.currentLang === 'zh'
-          ? 'Notempty - 一个对新手友好的轻量级网页笔记工具，支持本地部署或外网部署，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录'
+          ? '悟空笔记 (Notempty) - 一个对新手友好的轻量级网页笔记工具，支持本地部署或外网部署，浏览器里写 Markdown，自动保存，支持图片上传和多用户登录'
           : 'Notempty - A beginner-friendly lightweight web note-taking tool supporting local or external deployment, with Markdown editing, auto-save, image upload and multi-user login';
       }
     }
