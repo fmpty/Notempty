@@ -1,77 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="悟空笔记 Notempty">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
   <defs>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFE066"/>
-      <stop offset="100%" stop-color="#E8A820"/>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
     </linearGradient>
   </defs>
-
-  <!-- 金箍棒 -->
-  <g stroke="#5B3A8C" stroke-width="10" stroke-linecap="round">
-    <line x1="72" y1="392" x2="430" y2="96" stroke="#F0B429" stroke-width="16"/>
-    <ellipse cx="72" cy="392" rx="22" ry="16" fill="#5B3A8C"/>
-    <ellipse cx="430" cy="96" rx="22" ry="16" fill="#5B3A8C"/>
-    <line x1="98" y1="368" x2="118" y2="348" stroke="#5B3A8C" stroke-width="12"/>
-    <line x1="384" y1="120" x2="404" y2="100" stroke="#5B3A8C" stroke-width="12"/>
-  </g>
-
-  <!-- 书本 -->
-  <g>
-    <path d="M96 360 C128 392 384 392 416 360 L416 430 C384 458 128 458 96 430 Z" fill="#5B3A8C"/>
-    <path d="M112 372 C140 398 372 398 400 372 L400 418 C372 442 140 442 112 418 Z" fill="#fff"/>
-    <path d="M256 372 L256 418" stroke="#5B3A8C" stroke-width="8"/>
-    <path d="M280 392 H388 M280 408 H372 M280 424 H360" stroke="#5B3A8C" stroke-width="7" stroke-linecap="round"/>
-  </g>
-
-  <!-- 浏览器窗口 -->
-  <g transform="translate(318 118)">
-    <rect x="0" y="0" width="132" height="108" rx="18" fill="#fff" stroke="#5B3A8C" stroke-width="10"/>
-    <line x1="0" y1="34" x2="132" y2="34" stroke="#5B3A8C" stroke-width="8"/>
-    <circle cx="22" cy="17" r="5" fill="#5B3A8C"/>
-    <circle cx="38" cy="17" r="5" fill="#5B3A8C"/>
-    <circle cx="54" cy="17" r="5" fill="#5B3A8C"/>
-    <path d="M112 10 L122 20 M122 10 L112 20" stroke="#5B3A8C" stroke-width="5" stroke-linecap="round"/>
-    <rect x="24" y="52" width="52" height="40" rx="8" fill="#fff" stroke="#5B3A8C" stroke-width="7"/>
-    <path d="M36 72 L46 82 L64 58" stroke="#5B3A8C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M88 48 L118 28" stroke="#5B3A8C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M96 28 H118 V50" stroke="#5B3A8C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-
-  <!-- 悟空头部 -->
-  <g>
-    <!-- 耳朵 -->
-    <ellipse cx="132" cy="214" rx="34" ry="42" fill="#5B3A8C"/>
-    <ellipse cx="132" cy="214" rx="18" ry="24" fill="#7A55A8"/>
-    <ellipse cx="380" cy="214" rx="34" ry="42" fill="#5B3A8C"/>
-    <ellipse cx="380" cy="214" rx="18" ry="24" fill="#7A55A8"/>
-
-    <!-- 头发 -->
-    <path d="M156 118 C176 72 220 56 256 56 C292 56 336 72 356 118 C348 92 312 78 256 78 C200 78 164 92 156 118 Z" fill="#5B3A8C"/>
-    <path d="M236 56 C246 28 266 18 256 8 C246 18 266 28 276 56" fill="#5B3A8C"/>
-    <path d="M256 56 C266 28 286 18 276 8 C266 18 246 28 236 56" fill="#5B3A8C"/>
-
-    <!-- 脸 -->
-    <ellipse cx="256" cy="228" rx="118" ry="108" fill="#5B3A8C"/>
-    <path d="M176 214 C188 176 220 156 256 156 C292 156 324 176 336 214 C324 268 292 292 256 292 C220 292 188 268 176 214 Z" fill="#fff"/>
-
-    <!-- 眼睛 -->
-    <circle cx="220" cy="224" r="12" fill="url(#gold)"/>
-    <circle cx="292" cy="224" r="12" fill="url(#gold)"/>
-
-    <!-- 嘴 -->
-    <path d="M228 258 C240 272 272 272 284 258" stroke="#5B3A8C" stroke-width="8" stroke-linecap="round"/>
-
-    <!-- 紧箍咒 -->
-    <path d="M176 188 C196 168 216 160 256 160 C296 160 316 168 336 188" stroke="url(#gold)" stroke-width="14" stroke-linecap="round"/>
-    <path d="M236 168 C244 150 252 142 256 142 C260 142 268 150 276 168" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
-    <path d="M248 152 C252 138 260 132 256 126 C252 132 260 138 264 152" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
-  </g>
-
-  <!-- 披风 -->
-  <g>
-    <path d="M176 292 C156 318 148 352 156 382 C188 368 324 368 356 382 C364 352 356 318 336 292 C312 312 200 312 176 292 Z" fill="#5B3A8C"/>
-    <path d="M176 292 C200 308 312 308 336 292" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="256" cy="318" r="18" fill="url(#gold)" stroke="#5B3A8C" stroke-width="6"/>
-    <path d="M256 300 C248 312 248 324 256 336 C264 324 264 312 256 300 Z" fill="#5B3A8C"/>
-  </g>
+  <rect x="10" y="10" width="80" height="80" rx="16" fill="url(#gradient)"/>
+  <path d="M30 35 L30 65 L45 65 L45 55 L55 55 L55 65 L70 65 L70 35 L55 35 L55 45 L45 45 L45 35 Z" fill="white"/>
+  <circle cx="50" cy="50" r="8" fill="white" opacity="0.3"/>
 </svg>

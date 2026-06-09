@@ -116,7 +116,7 @@ const I18N = {
     },
     hero: {
       title: 'Notempty',
-      subtitle: 'Wukong Notes',
+      subtitle: 'Lightweight Notes',
       descriptionShort: 'A beginner-friendly lightweight note-taking tool',
       description: 'A beginner-friendly lightweight note-taking tool supporting local or external deployment. Write Markdown in browser with auto-save, image upload and multi-user login.',
       download: 'Download Now',
@@ -261,7 +261,7 @@ const i18n = {
     } else {
       document.title = this.currentLang === 'zh'
         ? 'Notempty · 悟空笔记'
-        : 'Notempty · WuKong Web Notes';
+        : 'Notempty · Lightweight Web Notes';
     }
 
     // 更新 meta description
