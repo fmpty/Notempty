@@ -88,6 +88,13 @@ body {
     color: var(--primary);
 }
 
+.logo .logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
 .logo-img {
     width: 36px;
     height: 36px;
@@ -797,9 +804,11 @@ section {
     margin-bottom: 16px;
 }
 
-.footer-brand .logo-icon {
-    width: 36px;
-    height: 36px;
+.footer-brand .logo-icon,
+.footer-brand .logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
 }
 
 .footer-desc {
