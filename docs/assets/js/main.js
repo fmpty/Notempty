@@ -69,20 +69,31 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
 
-    // 平滑滚动到锚点
+    // 平滑滚动到锚点（跳过 href="#" 等无效锚点）
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offsetTop = target.offsetTop - 80; // 减去导航栏高度
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            const href = this.getAttribute('href');
+            if (!href || href === '#') {
+                return;
+            }
 
-                // 关闭移动端菜单
+            const target = document.querySelector(href);
+            if (!target) {
+                return;
+            }
+
+            e.preventDefault();
+            const offsetTop = target.offsetTop - 80; // 减去导航栏高度
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+
+            // 关闭移动端菜单
+            if (navLinks) {
                 navLinks.classList.remove('active');
+            }
+            if (mobileMenuBtn) {
                 mobileMenuBtn.classList.remove('active');
             }
         });
