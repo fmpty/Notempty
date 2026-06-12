@@ -1114,30 +1114,14 @@ code {
 
 /* 评论区域 */
 .comments {
-    background: var(--surface);
-    padding: 80px 0;
+    margin: 32px 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
 }
 
-.comments .container {
-    max-width: 900px;
-}
-
-#comments-container {
-    margin-top: 40px;
-    background: var(--background);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px;
-}
-
-/* Giscus 主题适配 */
-#comments-container iframe {
-    border-radius: 12px;
-}
-
-/* 深色模式下 Giscus 评论样式 */
-@media (prefers-color-scheme: dark) {
-    #comments-container {
-        background: var(--surface);
-    }
+.comments-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text);
 }
