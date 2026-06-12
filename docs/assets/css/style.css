@@ -1114,14 +1114,30 @@ code {
 
 /* 评论区域 */
 .comments {
-    margin: 32px 0;
-    padding-top: 24px;
+    margin: 24px 0;
+    padding-top: 20px;
     border-top: 1px solid var(--border);
 }
 
 .comments-title {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 16px;
-    color: var(--text);
+    margin-bottom: 20px;
+    color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comments-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: var(--gradient-1);
+    border-radius: 2px;
+}
+
+#comments-container {
+    border-radius: 12px;
+    overflow: hidden;
 }
