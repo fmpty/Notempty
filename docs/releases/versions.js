@@ -1,26 +1,45 @@
 // 版本配置文件 - 发布新版本时只需修改这里
 const VERSION = {
-  latest: "v1.0.3",
-  date: "2026-06-09",
-  changelog: "修复文件监听内存泄漏问题，提升长时间运行稳定性",
+  latest: "v1.0.4",
+  date: "2026-07-01",
+  changelog: "增加了本地用户登录，避免没有网络的情况下单机使用",
   files: {
     windows: [
-      { name: "Windows x64", file: "Notempty-v1.0.3-windows-amd64.exe", arch: "amd64" },
-      { name: "Windows 32位", file: "Notempty-v1.0.3-windows-386.exe", arch: "386" }
+      { name: "Windows x64", file: "Notempty-v1.0.4-windows-amd64.exe", arch: "amd64" },
+      { name: "Windows 32位", file: "Notempty-v1.0.4-windows-386.exe", arch: "386" }
     ],
     linux: [
-      { name: "Linux x64", file: "Notempty-v1.0.3-linux-amd64", arch: "amd64" },
-      { name: "Linux ARM64", file: "Notempty-v1.0.3-linux-arm64", arch: "arm64" }
+      { name: "Linux x64", file: "Notempty-v1.0.4-linux-amd64", arch: "amd64" },
+      { name: "Linux ARM64", file: "Notempty-v1.0.4-linux-arm64", arch: "arm64" }
     ],
     macos: [
-      { name: "macOS Intel", file: "Notempty-v1.0.3-darwin-amd64", arch: "amd64" },
-      { name: "macOS Apple Silicon", file: "Notempty-v1.0.3-darwin-arm64", arch: "arm64" }
+      { name: "macOS Intel", file: "Notempty-v1.0.4-darwin-amd64", arch: "amd64" },
+      { name: "macOS Apple Silicon", file: "Notempty-v1.0.4-darwin-arm64", arch: "arm64" }
     ]
   }
 };
 
 // 历史版本列表 - 添加新版本时在这里追加
 const VERSIONS_HISTORY = [
+  {
+    version: "v1.0.4",
+    date: "2026-07-01",
+    changelog: "增加了本地用户登录，避免没有网络的情况下单机使用",
+    files: {
+      windows: [
+        { name: "Windows x64", file: "Notempty-v1.0.4-windows-amd64.exe", arch: "amd64" },
+        { name: "Windows 32位", file: "Notempty-v1.0.4-windows-386.exe", arch: "386" }
+      ],
+      linux: [
+        { name: "Linux x64", file: "Notempty-v1.0.4-linux-amd64", arch: "amd64" },
+        { name: "Linux ARM64", file: "Notempty-v1.0.4-linux-arm64", arch: "arm64" }
+      ],
+      macos: [
+        { name: "macOS Intel", file: "Notempty-v1.0.4-darwin-amd64", arch: "amd64" },
+        { name: "macOS Apple Silicon", file: "Notempty-v1.0.4-darwin-arm64", arch: "arm64" }
+      ]
+    }
+  },
   {
     version: "v1.0.3",
     date: "2026-06-09",
